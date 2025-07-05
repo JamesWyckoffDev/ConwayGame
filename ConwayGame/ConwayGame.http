@@ -1,0 +1,6 @@
+@ConwayGame_HostAddress = http://localhost:5243
+
+GET {{ConwayGame_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
