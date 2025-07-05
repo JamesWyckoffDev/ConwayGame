@@ -33,8 +33,7 @@ namespace ConwayGame.Data
                 entity.HasKey(b => b.Id);
                 entity.Property(b => b.StateJson)
                       .IsRequired();
-                entity.Property(b => b.CreatedAt)
-                      .HasDefaultValueSql("CURRENT_TIMESTAMP"); // SQLite specific default value
+                entity.Property(b => b.CreatedAt);
             });
 
             // Configure the BoardHistory entity (optional)
@@ -46,8 +45,7 @@ namespace ConwayGame.Data
                       .HasForeignKey(bh => bh.BoardId);
                 entity.Property(bh => bh.StateJson)
                       .IsRequired();
-                entity.Property(bh => bh.Timestamp)
-                      .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                entity.Property(bh => bh.Timestamp);
             });
         }
     }
